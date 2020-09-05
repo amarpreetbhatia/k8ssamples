@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: posgreSQL
+  labels:
+    tier: database
+spec:
+  containers:
+   - name: my-postgres
+     image: postgres
+     env:
+       - name: POSTGRES_PASSWORD
+         value: mysecretPassword
